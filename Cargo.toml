@@ -1,0 +1,36 @@
+[package]
+name = "sdr-digger"
+version = "0.1.0"
+description = "Case-first RTL-SDR workbench for radio experiments — not just FM"
+authors = ["Viacheslav Chub <vyacheslav.chub@gmail.com>"]
+license = "MIT"
+edition = "2021"
+readme = "README.md"
+keywords = ["sdr", "radio", "rtl-sdr", "ratatui", "futuresdr"]
+categories = ["command-line-utilities", "hardware-support", "multimedia::audio"]
+
+[dependencies]
+ratatui = { version = "0.30", features = ["crossterm"] }
+crossterm = "0.29"
+crossbeam-channel = "0.5"
+clap = { version = "4", features = ["derive"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+toml = "0.8"
+dirs = "5"
+futuresdr = { version = "0.0.40", features = ["seify", "soapy", "audio"] }
+num-complex = "0.4"
+libc = "0.2"
+rustfft = "6.4"
+fmradio = "0.4.2"
+desperado = "0.4.2"
+ditdah = "0.2"
+rand = "0.9"
+thiserror = "2"
+
+[dev-dependencies]
+pretty_assertions = "1"
+
+[[bin]]
+name = "sdr-digger"
+path = "src/main.rs"

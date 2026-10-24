@@ -1,0 +1,55 @@
+schema = 1
+name = "SO-50"
+name_uk = "SO-50"
+slug = "so-50"
+family = "amateur-fm"
+difficulty = "weekend"
+
+[tune]
+frequency_hz = 436_795_000
+ppm = 0.0
+raster_hz = 0
+
+[window]
+sample_rate_hz = 1_024_000
+channel_bw_hz = 12_500
+
+[strength]
+gain = "manual"
+gain_db = 40.2
+
+[voice]
+mode = "nbfm"
+deviation_hz = 5_000
+deemphasis_us = 0
+squelch_db = -70.0
+cw_pitch_hz = 700.0
+
+[readout]
+audio = true
+morse = false
+
+[detect]
+mode = "poll"
+shape = "nbfm"
+identify = "none"
+
+[coach]
+summary = "SaudiSat SO-50 downlink: narrow FM around 436.795 MHz during a pass."
+hints = [
+  "The bird is only loud for a few minutes. Doppler walks the carrier by several kHz.",
+  "After a hit, nudge with the 1 kHz family step as it rises and sets.",
+]
+caveats = ["Empty between passes. Uplink is 145.850 MHz and is not used here."]
+
+[coach.uk]
+summary = "Низхідний канал SO-50: вузьке FM близько 436.795 МГц під час прольоту."
+hints = [
+  "Супутник гучний лише кілька хвилин. Доплер зсуває несучу на кілька кГц.",
+  "Після влучання крокуйте по 1 кГц, поки він сходить і заходить.",
+]
+caveats = ["Між прольотами порожньо. Висхідний 145.850 МГц тут не використовується."]
+
+[[bookmarks]]
+name = "downlink"
+frequency_hz = 436_795_000

@@ -1,0 +1,68 @@
+schema = 1
+name = "Broadcast FM (Region 1)"
+name_uk = "Мовленнєве FM (регіон 1)"
+slug = "fm-broadcast-r1"
+family = "broadcast-fm"
+difficulty = "beginner"
+
+[tune]
+frequency_hz = 101_500_000
+ppm = 0.0
+raster_hz = 100_000
+
+[window]
+sample_rate_hz = 1_024_000
+channel_bw_hz = 180_000
+
+[strength]
+gain = "manual"
+gain_db = 36.4
+
+[voice]
+mode = "wbfm"
+deviation_hz = 75_000
+deemphasis_us = 50
+squelch_db = -60.0
+cw_pitch_hz = 700.0
+
+[readout]
+audio = true
+morse = false
+
+[detect]
+mode = "hop"
+band_start_hz = 87_500_000
+band_end_hz = 108_000_000
+raster_hz = 100_000
+shape = "wbfm-haystack"
+identify = "rds"
+
+[coach]
+summary = "Wideband FM broadcast: music and talk on 87.5–108 MHz."
+hints = [
+  "Press g to scan the band — the detector looks for 180 kHz haystacks.",
+  "Region 1 uses 50 µs de-emphasis (Europe / Ukraine).",
+  "If audio is thin, check PPM — cheap crystals drift.",
+]
+caveats = ["Stereo decode is mono L+R for now; RDS names appear after Scan."]
+
+[coach.uk]
+summary = "Широкосмугове мовленнєве FM: музика й розмови на 87.5–108 МГц."
+hints = [
+  "Натисніть g для скану — детектор шукає «стоги» ~180 кГц.",
+  "У регіоні 1 деемфазис 50 мкс (Європа / Україна).",
+  "Якщо звук тонкий — перевірте PPM, кварц дешевий.",
+]
+caveats = ["Стерео поки як моно L+R; імена RDS з'являються після скану."]
+
+[[bookmarks]]
+name = "Hit FM"
+frequency_hz = 96_100_000
+
+[[bookmarks]]
+name = "Radio ROKS"
+frequency_hz = 101_500_000
+
+[[bookmarks]]
+name = "Lux FM"
+frequency_hz = 103_100_000

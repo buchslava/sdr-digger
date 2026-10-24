@@ -1,0 +1,51 @@
+schema = 1
+name = "ADS-B 1090"
+name_uk = "ADS-B 1090"
+slug = "adsb-1090"
+family = "digital"
+difficulty = "lab"
+
+[tune]
+frequency_hz = 1_090_000_000
+ppm = 0.0
+raster_hz = 0
+
+[window]
+sample_rate_hz = 2_048_000
+channel_bw_hz = 2_000_000
+
+[strength]
+gain = "manual"
+gain_db = 40.2
+
+[voice]
+mode = "off"
+deviation_hz = 0
+deemphasis_us = 0
+squelch_db = -100.0
+cw_pitch_hz = 700.0
+
+[readout]
+audio = false
+morse = false
+
+[detect]
+mode = "window"
+shape = "energy"
+identify = "none"
+
+[coach]
+summary = "Aircraft ADS-B squitters at 1090 MHz. Watch the spectrum pulses — no decoder here."
+hints = [
+  "Voice Off on purpose. Use dump1090 / readsb for frames later.",
+  "A 1090 antenna helps a lot.",
+]
+caveats = ["This case is watch-only in v1."]
+
+[coach.uk]
+summary = "ADS-B літаків на 1090 МГц. Дивіться імпульси на спектрі — декодера тут немає."
+hints = [
+  "Голос навмисно вимкнено. Для кадрів пізніше — dump1090 / readsb.",
+  "Антена на 1090 дуже допомагає.",
+]
+caveats = ["У v1 цей кейс лише для спостереження."]

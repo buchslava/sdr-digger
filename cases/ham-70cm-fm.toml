@@ -1,0 +1,58 @@
+schema = 1
+name = "Ham 70cm FM"
+name_uk = "Аматори 70 см FM"
+slug = "ham-70cm-fm"
+family = "amateur-fm"
+difficulty = "beginner"
+
+[tune]
+frequency_hz = 433_500_000
+ppm = 0.0
+raster_hz = 25_000
+
+[window]
+sample_rate_hz = 1_024_000
+channel_bw_hz = 12_500
+
+[strength]
+gain = "manual"
+gain_db = 36.4
+
+[voice]
+mode = "nbfm"
+deviation_hz = 5_000
+deemphasis_us = 0
+squelch_db = -50.0
+cw_pitch_hz = 700.0
+
+[readout]
+audio = true
+morse = false
+
+[detect]
+mode = "hop"
+band_start_hz = 430_000_000
+band_end_hz = 440_000_000
+raster_hz = 25_000
+shape = "nbfm"
+identify = "none"
+
+[coach]
+summary = "Amateur FM on 70 cm (430–440 MHz, Region 1). Calling channel is often 433.500."
+hints = [
+  "Scan finds repeaters and simplex. Quiet channels are normal.",
+  "433.92 MHz ISM bursts sit in the same slice — short spikes are sensors, not hams.",
+]
+caveats = ["Transmit only if licensed."]
+
+[coach.uk]
+summary = "Аматорське FM на 70 см (430–440 МГц, регіон 1). Виклик часто на 433.500."
+hints = [
+  "Скан шукає репітери й симплекс. Тиша на каналах — норма.",
+  "Імпульси ISM на 433.92 МГц — датчики, не аматори.",
+]
+caveats = ["Передавати — лише з ліцензією."]
+
+[[bookmarks]]
+name = "calling"
+frequency_hz = 433_500_000

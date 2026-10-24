@@ -1,0 +1,58 @@
+schema = 1
+name = "Marine CH16"
+name_uk = "Море канал 16"
+slug = "marine-ch16"
+family = "marine"
+difficulty = "beginner"
+
+[tune]
+frequency_hz = 156_800_000
+ppm = 0.0
+raster_hz = 25_000
+
+[window]
+sample_rate_hz = 1_024_000
+channel_bw_hz = 12_500
+
+[strength]
+gain = "manual"
+gain_db = 36.4
+
+[voice]
+mode = "nbfm"
+deviation_hz = 5_000
+deemphasis_us = 0
+squelch_db = -50.0
+cw_pitch_hz = 700.0
+
+[readout]
+audio = true
+morse = false
+
+[detect]
+mode = "hop"
+band_start_hz = 156_000_000
+band_end_hz = 162_025_000
+raster_hz = 25_000
+shape = "nbfm"
+identify = "none"
+
+[coach]
+summary = "Marine VHF: channel 16 (156.800) is the distress / calling frequency."
+hints = [
+  "NBFM with a narrow filter. Squelch closed when idle.",
+  "Near the coast you will hear more; inland may be silent.",
+]
+caveats = ["Emergency traffic — listen respectfully."]
+
+[coach.uk]
+summary = "Морський УКХ: канал 16 (156.800) — лихо / виклик."
+hints = [
+  "NBFM із вузьким фільтром. Сквелч закритий у тиші.",
+  "Біля узбережжя чути більше; вглиб країни може бути тихо.",
+]
+caveats = ["Аварійний трафік — слухайте з повагою."]
+
+[[bookmarks]]
+name = "CH16"
+frequency_hz = 156_800_000

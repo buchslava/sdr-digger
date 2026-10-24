@@ -1,0 +1,56 @@
+schema = 1
+name = "Ham 10m CW"
+name_uk = "Аматори 10 м CW"
+slug = "ham-10m-cw"
+family = "amateur-cw"
+difficulty = "weekend"
+
+[tune]
+frequency_hz = 28_025_000
+ppm = 0.0
+raster_hz = 0
+
+[window]
+sample_rate_hz = 1_024_000
+channel_bw_hz = 400
+
+[strength]
+gain = "manual"
+gain_db = 40.2
+
+[voice]
+mode = "cw"
+deviation_hz = 0
+deemphasis_us = 0
+squelch_db = -90.0
+cw_pitch_hz = 700.0
+
+[readout]
+audio = true
+morse = true
+
+[detect]
+mode = "hop"
+band_start_hz = 28_000_000
+band_end_hz = 28_070_000
+raster_hz = 100
+shape = "cw-needle"
+identify = "none"
+
+[coach]
+summary = "CW (Morse) on 10 metres. The detector looks for thin needles, not haystacks."
+hints = [
+  "Enable Morse readout — ditdah translates audio when the signal is clean.",
+  "Same HF tuner caveat as SSB.",
+  "Fine-tune in 10 Hz steps.",
+]
+caveats = ["Hand-keyed Morse may decode imperfectly — that is normal."]
+
+[coach.uk]
+summary = "CW (Морзе) на 10 м. Детектор шукає тонкі «голки», не стоги."
+hints = [
+  "Увімкніть зчитування Морзе — ditdah перекладає чистий сигнал.",
+  "Та сама застереження щодо КХ-тюнера, що й для SSB.",
+  "Крок підстройки 10 Гц.",
+]
+caveats = ["Ручне Морзе може декодуватися криво — це нормально."]

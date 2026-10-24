@@ -1,0 +1,53 @@
+schema = 1
+name = "ISM 433 MHz"
+name_uk = "ISM 433 МГц"
+slug = "ism-433"
+family = "digital"
+difficulty = "beginner"
+
+[tune]
+frequency_hz = 433_920_000
+ppm = 0.0
+raster_hz = 0
+
+[window]
+sample_rate_hz = 1_024_000
+channel_bw_hz = 200_000
+
+[strength]
+gain = "manual"
+gain_db = 36.4
+
+[voice]
+mode = "off"
+deviation_hz = 0
+deemphasis_us = 0
+squelch_db = -100.0
+cw_pitch_hz = 700.0
+
+[readout]
+audio = false
+morse = false
+
+[detect]
+mode = "window"
+band_start_hz = 433_050_000
+band_end_hz = 434_790_000
+shape = "energy"
+identify = "none"
+
+[coach]
+summary = "European 433 MHz ISM: weather sensors, bells, and keyfobs as short bursts."
+hints = [
+  "Voice is off. Watch the waterfall for spikes around 433.92 MHz.",
+  "Press a keyfob or wait for a sensor. Empty grass means nothing is transmitting.",
+]
+caveats = ["Bursts are brief. This case does not decode the packets."]
+
+[coach.uk]
+summary = "Європейський ISM 433 МГц: датчики погоди, дзвінки й брелоки — короткі спалахи."
+hints = [
+  "Голос вимкнено. Дивіться спалахи на водоспаді біля 433.92 МГц.",
+  "Натисніть брелок або зачекайте датчик. Порожня трава — ніхто не передає.",
+]
+caveats = ["Спалахи короткі. Пакети цей кейс не розбирає."]

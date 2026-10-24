@@ -1,0 +1,79 @@
+schema = 1
+name = "NOAA Weather Radio"
+name_uk = "NOAA погода (голос)"
+slug = "noaa-weather"
+family = "marine"
+difficulty = "beginner"
+
+[tune]
+frequency_hz = 162_550_000
+ppm = 0.0
+raster_hz = 0
+
+[window]
+sample_rate_hz = 1_024_000
+channel_bw_hz = 12_500
+
+[strength]
+gain = "manual"
+gain_db = 40.2
+
+[voice]
+mode = "nbfm"
+deviation_hz = 5_000
+deemphasis_us = 0
+squelch_db = -45.0
+cw_pitch_hz = 700.0
+
+[readout]
+audio = true
+morse = false
+
+[detect]
+mode = "poll"
+shape = "nbfm"
+identify = "none"
+
+[coach]
+summary = "US NOAA Weather Radio transmitters around 162 MHz (NBFM)."
+hints = [
+  "Scan polls the seven WX frequencies.",
+  "Coverage is regional — empty findings mean you are out of range.",
+]
+caveats = ["Outside North America these channels are usually empty."]
+
+[coach.uk]
+summary = "Американське NOAA Weather Radio близько 162 МГц (NBFM)."
+hints = [
+  "Скан опитує сім WX-частот.",
+  "Покриття регіональне — порожній список означає «поза зоною».",
+]
+caveats = ["Поза Північною Америкою канали зазвичай порожні."]
+
+[[bookmarks]]
+name = "WX1"
+frequency_hz = 162_400_000
+
+[[bookmarks]]
+name = "WX2"
+frequency_hz = 162_425_000
+
+[[bookmarks]]
+name = "WX3"
+frequency_hz = 162_450_000
+
+[[bookmarks]]
+name = "WX4"
+frequency_hz = 162_475_000
+
+[[bookmarks]]
+name = "WX5"
+frequency_hz = 162_500_000
+
+[[bookmarks]]
+name = "WX6"
+frequency_hz = 162_525_000
+
+[[bookmarks]]
+name = "WX7"
+frequency_hz = 162_550_000

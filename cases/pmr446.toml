@@ -1,0 +1,62 @@
+schema = 1
+name = "PMR446"
+name_uk = "PMR446"
+slug = "pmr446"
+family = "lab"
+difficulty = "beginner"
+
+[tune]
+frequency_hz = 446_006_250
+ppm = 0.0
+raster_hz = 0
+
+[window]
+sample_rate_hz = 1_024_000
+channel_bw_hz = 12_500
+
+[strength]
+gain = "manual"
+gain_db = 36.4
+
+[voice]
+mode = "nbfm"
+deviation_hz = 2_500
+deemphasis_us = 0
+squelch_db = -45.0
+cw_pitch_hz = 700.0
+
+[readout]
+audio = true
+morse = false
+
+[detect]
+mode = "hop"
+band_start_hz = 446_000_000
+band_end_hz = 446_200_000
+raster_hz = 12_500
+shape = "nbfm"
+identify = "none"
+
+[coach]
+summary = "Licence-free PMR446: 16 narrow-FM channels from 446.00625 MHz, step 12.5 kHz."
+hints = [
+  "Channel 1 is the dial frequency. Squelch stays closed until someone talks.",
+  "Range is a few kilometres. A quiet scan in the countryside is normal.",
+]
+caveats = ["Listen only. These are other people's conversations."]
+
+[coach.uk]
+summary = "PMR446 без ліцензії: 16 каналів вузького FM від 446.00625 МГц, крок 12.5 кГц."
+hints = [
+  "Канал 1 — частота на шкалі. Сквелч закритий, поки хтось не говорить.",
+  "Дальність кілька кілометрів. Тихий скан за містом — норма.",
+]
+caveats = ["Лише прийом. Це чужі розмови."]
+
+[[bookmarks]]
+name = "CH1"
+frequency_hz = 446_006_250
+
+[[bookmarks]]
+name = "CH8"
+frequency_hz = 446_093_750

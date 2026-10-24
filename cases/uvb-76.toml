@@ -1,0 +1,57 @@
+schema = 1
+name = "UVB-76 The Buzzer"
+name_uk = "UVB-76 Жужжалка"
+slug = "uvb-76"
+family = "lab"
+difficulty = "weekend"
+
+[tune]
+frequency_hz = 4_625_000
+ppm = 0.0
+raster_hz = 0
+
+[window]
+sample_rate_hz = 1_024_000
+channel_bw_hz = 2_700
+
+[strength]
+gain = "manual"
+gain_db = 40.2
+
+[voice]
+mode = "usb"
+deviation_hz = 0
+deemphasis_us = 0
+squelch_db = -80.0
+cw_pitch_hz = 700.0
+
+[readout]
+audio = true
+morse = false
+
+[detect]
+mode = "poll"
+shape = "energy"
+identify = "none"
+
+[coach]
+summary = "The Buzzer (UVB-76): a repeating tone on 4625 kHz USB, with rare voice messages."
+hints = [
+  "This is HF, not VHF. A stock R820T2 stays silent below about 24 MHz.",
+  "With an upconverter, tune LO + 4.625 MHz (a 125 MHz LO means 129.625 MHz) and keep USB.",
+  "A wire near 16 m can hear it. The FM whip cannot. Night is kinder.",
+]
+caveats = ["The channel is mostly the buzz, not a programme. Listening is fine."]
+
+[coach.uk]
+summary = "UVB-76: повторюваний тон на 4625 кГц USB, зрідка голос."
+hints = [
+  "Це КХ, не УКХ. Звичайний R820T2 мовчить нижче приблизно 24 МГц.",
+  "З апконвертером ставте частоту гетеродина + 4.625 МГц (зсув 125 МГц → 129.625 МГц), режим USB.",
+  "Чує провід близько 16 м, не штир від FM. Уночі краще.",
+]
+caveats = ["У каналі майже весь час тон, не передача. Прийом дозволений."]
+
+[[bookmarks]]
+name = "4625 kHz"
+frequency_hz = 4_625_000

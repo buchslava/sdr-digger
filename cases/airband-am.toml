@@ -1,0 +1,56 @@
+schema = 1
+name = "Airband AM"
+name_uk = "Авіація AM"
+slug = "airband-am"
+family = "airband"
+difficulty = "beginner"
+
+[tune]
+frequency_hz = 118_000_000
+ppm = 0.0
+raster_hz = 25_000
+
+[window]
+sample_rate_hz = 1_024_000
+channel_bw_hz = 10_000
+
+[strength]
+gain = "manual"
+gain_db = 40.2
+
+[voice]
+mode = "am"
+deviation_hz = 0
+deemphasis_us = 0
+squelch_db = -55.0
+cw_pitch_hz = 700.0
+
+[readout]
+audio = true
+morse = false
+
+[detect]
+mode = "hop"
+band_start_hz = 118_000_000
+band_end_hz = 136_975_000
+raster_hz = 25_000
+shape = "am"
+identify = "none"
+
+[coach]
+summary = "Aircraft and towers talk in AM between 118 and 137 MHz."
+hints = [
+  "Scan uses a 25 kHz raster (try 8.33 kHz steps manually near busy airports).",
+  "Squelch helps — channels idle most of the time.",
+  "A vertical VHF antenna beats the stock whip.",
+]
+caveats = ["Listening to ATC for curiosity is fine; do not transmit."]
+
+[coach.uk]
+summary = "Літаки й вишки говорять AM між 118 і 137 МГц."
+hints = [
+  "Скан на растрі 25 кГц (біля аеропортів вручну спробуйте 8.33 кГц).",
+  "Сквелч допомагає — канали більшість часу мовчать.",
+  "Вертикаль на УКХ краща за штатний штир.",
+]
+caveats = ["Слухати ATC можна; передавати — ні."]

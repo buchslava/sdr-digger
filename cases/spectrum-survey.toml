@@ -1,0 +1,51 @@
+schema = 1
+name = "Spectrum survey"
+name_uk = "Огляд спектра"
+slug = "spectrum-survey"
+family = "lab"
+difficulty = "lab"
+
+[tune]
+frequency_hz = 100_000_000
+ppm = 0.0
+raster_hz = 0
+
+[window]
+sample_rate_hz = 2_048_000
+channel_bw_hz = 200_000
+
+[strength]
+gain = "manual"
+gain_db = 29.7
+
+[voice]
+mode = "off"
+deviation_hz = 0
+deemphasis_us = 0
+squelch_db = -100.0
+cw_pitch_hz = 700.0
+
+[readout]
+audio = false
+morse = false
+
+[detect]
+mode = "window"
+shape = "energy"
+identify = "none"
+
+[coach]
+summary = "Wide eyes, quiet ears. Survey first, then load a case that matches what you see."
+hints = [
+  "Raise sample rate for a wider window; lower gain if the floor is a wall.",
+  "Window detect finds energy peaks in the current view.",
+]
+caveats = []
+
+[coach.uk]
+summary = "Широкі очі, тихі вуха. Спочатку огляньте, потім оберіть кейс під те, що бачите."
+hints = [
+  "Більший sample rate — ширше вікно; зменште gain, якщо підлога — стіна.",
+  "Window-детект шукає енергію в поточному вигляді.",
+]
+caveats = []

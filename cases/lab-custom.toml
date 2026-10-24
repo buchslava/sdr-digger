@@ -1,0 +1,51 @@
+schema = 1
+name = "Lab custom"
+name_uk = "Лабораторія"
+slug = "lab-custom"
+family = "lab"
+difficulty = "lab"
+
+[tune]
+frequency_hz = 433_920_000
+ppm = 0.0
+raster_hz = 0
+
+[window]
+sample_rate_hz = 1_024_000
+channel_bw_hz = 200_000
+
+[strength]
+gain = "manual"
+gain_db = 36.4
+
+[voice]
+mode = "off"
+deviation_hz = 0
+deemphasis_us = 0
+squelch_db = -50.0
+cw_pitch_hz = 700.0
+
+[readout]
+audio = true
+morse = false
+
+[detect]
+mode = "window"
+shape = "energy"
+identify = "none"
+
+[coach]
+summary = "All locks off. Dig carefully."
+hints = [
+  "You own every knob.",
+  "Save as a new slug when you find something interesting.",
+]
+caveats = []
+
+[coach.uk]
+summary = "Усі блокування знято. Копайте обережно."
+hints = [
+  "Усі крутилки ваші.",
+  "Збережіть під новим slug, коли знайдете щось цікаве.",
+]
+caveats = []

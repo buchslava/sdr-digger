@@ -1,0 +1,67 @@
+schema = 1
+name = "NOAA APT"
+name_uk = "NOAA APT"
+slug = "noaa-apt"
+family = "weather-sat"
+difficulty = "beginner"
+
+[tune]
+frequency_hz = 137_100_000
+ppm = 0.0
+raster_hz = 0
+
+[window]
+sample_rate_hz = 1_024_000
+channel_bw_hz = 40_000
+
+[strength]
+gain = "manual"
+gain_db = 36.4
+
+[voice]
+mode = "nbfm"
+deviation_hz = 17_000
+deemphasis_us = 0
+squelch_db = -80.0
+cw_pitch_hz = 700.0
+
+[readout]
+audio = true
+morse = false
+
+[detect]
+mode = "poll"
+shape = "apt"
+identify = "none"
+
+[coach]
+summary = "NOAA birds sing a ticking warble at 137 MHz as they pass."
+hints = [
+  "Need a pass overhead — this app does not predict passes yet.",
+  "Stock whip is OK if the sat is high. Better: VHF vertical.",
+  "De-emphasis OFF — this is not broadcast FM.",
+  "Scan polls 15/18/19. Empty findings just mean no bird right now.",
+]
+caveats = ["Image decode (wxtoimg-style) is a later experiment. Listen first."]
+
+[coach.uk]
+summary = "Супутники NOAA на 137 МГц співають цокаючий «факс» під час прольоту."
+hints = [
+  "Потрібен проліт над головою — цей застосунок ще не прогнозує вікна.",
+  "Штатний штир спрацює, якщо супутник високо. Краще — вертикаль на VHF.",
+  "Деемфазис ВИМКНЕНО — це не мовленнєве FM.",
+  "Скан опитує 15/18/19. Порожній список означає лише «зараз немає птаха».",
+]
+caveats = ["Декод зображення (як wxtoimg) — пізніший експеримент. Спочатку послухайте."]
+
+[[bookmarks]]
+name = "NOAA-19"
+frequency_hz = 137_100_000
+
+[[bookmarks]]
+name = "NOAA-18"
+frequency_hz = 137_912_500
+
+[[bookmarks]]
+name = "NOAA-15"
+frequency_hz = 137_620_000

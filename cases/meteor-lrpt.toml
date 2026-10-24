@@ -1,0 +1,59 @@
+schema = 1
+name = "Meteor LRPT"
+name_uk = "Метеор LRPT"
+slug = "meteor-lrpt"
+family = "digital"
+difficulty = "weekend"
+
+[tune]
+frequency_hz = 137_900_000
+ppm = 0.0
+raster_hz = 0
+
+[window]
+sample_rate_hz = 1_024_000
+channel_bw_hz = 150_000
+
+[strength]
+gain = "manual"
+gain_db = 40.2
+
+[voice]
+mode = "off"
+deviation_hz = 0
+deemphasis_us = 0
+squelch_db = -100.0
+cw_pitch_hz = 700.0
+
+[readout]
+audio = false
+morse = false
+
+[detect]
+mode = "poll"
+shape = "energy"
+identify = "none"
+
+[coach]
+summary = "Meteor-M digital picture (LRPT) near 137.1 or 137.9 MHz. It is a wide hump, not NOAA voice."
+hints = [
+  "Only during a pass. The analog ticking sound is the NOAA APT case, not this one.",
+  "Voice is off. A bright block on the waterfall for several minutes means the bird is up.",
+]
+caveats = ["This app does not draw the image. Record IQ and decode it elsewhere."]
+
+[coach.uk]
+summary = "Цифрове зображення Метеор-М (LRPT) біля 137.1 або 137.9 МГц. Це широкий горб, не голос NOAA."
+hints = [
+  "Лише під час прольоту. Тікання аналогового APT — інший кейс.",
+  "Голос вимкнено. Яскравий блок на водоспаді кілька хвилин — супутник у небі.",
+]
+caveats = ["Картинку ця програма не малює. Запишіть IQ і розберіть зовні."]
+
+[[bookmarks]]
+name = "137.9"
+frequency_hz = 137_900_000
+
+[[bookmarks]]
+name = "137.1"
+frequency_hz = 137_100_000

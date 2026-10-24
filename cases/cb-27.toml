@@ -1,0 +1,62 @@
+schema = 1
+name = "CB 27 MHz"
+name_uk = "Сі-Бі 27 МГц"
+slug = "cb-27"
+family = "lab"
+difficulty = "weekend"
+
+[tune]
+frequency_hz = 27_185_000
+ppm = 0.0
+raster_hz = 0
+
+[window]
+sample_rate_hz = 1_024_000
+channel_bw_hz = 10_000
+
+[strength]
+gain = "manual"
+gain_db = 40.2
+
+[voice]
+mode = "am"
+deviation_hz = 0
+deemphasis_us = 0
+squelch_db = -60.0
+cw_pitch_hz = 700.0
+
+[readout]
+audio = true
+morse = false
+
+[detect]
+mode = "hop"
+band_start_hz = 26_965_000
+band_end_hz = 27_405_000
+raster_hz = 10_000
+shape = "am"
+identify = "none"
+
+[coach]
+summary = "Citizen's Band around 27 MHz. Channel 19 (27.185) is the usual calling place. Mode is AM."
+hints = [
+  "This is the bottom edge of an R820T2. If the spectrum is dead, the tuner never locked.",
+  "A wire of a few metres beats the FM whip. Truck routes are busier than a quiet street.",
+]
+caveats = ["Some European sets use FM on the same channels. Switch the mode if AM is muffled."]
+
+[coach.uk]
+summary = "Сі-Бі близько 27 МГц. Канал 19 (27.185) — звичне місце виклику. Режим AM."
+hints = [
+  "Це нижній край R820T2. Мертвий спектр означає, що тюнер не захватнув частоту.",
+  "Провід у кілька метрів кращий за штир від FM. Біля трас жвавіше, ніж у тихому дворі.",
+]
+caveats = ["Частина європейських станцій на тих самих каналах працює в FM. Якщо AM глухий — змініть режим."]
+
+[[bookmarks]]
+name = "CH19"
+frequency_hz = 27_185_000
+
+[[bookmarks]]
+name = "CH9"
+frequency_hz = 27_065_000

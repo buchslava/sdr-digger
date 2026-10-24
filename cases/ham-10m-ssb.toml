@@ -1,0 +1,54 @@
+schema = 1
+name = "Ham 10m SSB"
+name_uk = "Аматори 10 м SSB"
+slug = "ham-10m-ssb"
+family = "amateur-ssb"
+difficulty = "weekend"
+
+[tune]
+frequency_hz = 28_400_000
+ppm = 0.0
+raster_hz = 0
+
+[window]
+sample_rate_hz = 1_024_000
+channel_bw_hz = 2_700
+
+[strength]
+gain = "manual"
+gain_db = 40.2
+
+[voice]
+mode = "usb"
+deviation_hz = 0
+deemphasis_us = 0
+squelch_db = -80.0
+cw_pitch_hz = 700.0
+
+[readout]
+audio = true
+morse = false
+
+[detect]
+mode = "hop"
+band_start_hz = 28_300_000
+band_end_hz = 28_500_000
+raster_hz = 500
+shape = "am"
+identify = "none"
+
+[coach]
+summary = "10-metre amateur SSB (USB). Propagation comes and goes."
+hints = [
+  "Classic R820T2 is deaf below ~24 MHz — need RTL-SDR V4 or an upconverter.",
+  "Fine-tune in 50 Hz steps after a hit.",
+]
+caveats = ["HF reception depends on your tuner hardware."]
+
+[coach.uk]
+summary = "10-метрове аматорське SSB (USB). Проходження то є, то немає."
+hints = [
+  "Класичний R820T2 глухий нижче ~24 МГц — потрібен RTL-SDR V4 або апконвертер.",
+  "Після знахідки крутіть з кроком 50 Гц.",
+]
+caveats = ["Прийом КХ залежить від тюнера."]
